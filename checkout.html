@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body class="bg-light">
+    
+<nav class="navbar navbar-expand-lg fixed-top ovrsn-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-text">OVRSN</span>
+            <span class="brand-text-accent">SHOP</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Index</a></li>
+                        <li><a class="dropdown-item" href="account.html">account</a></li>
+                        <li><a class="dropdown-item" href="cart.html">cart</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="checkout.html">checkout</a></li>
+                        <li><a class="dropdown-item" href="men.html">men's collection</a></li>
+                        <li><a class="dropdown-item" href="women.html">women's collection</a></li>
+                        <li><a class="dropdown-item" href="product.html">product</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">login & register</a></li>
+                        <li><a class="dropdown-item" href="contact.html">contact</a></li>
+                    </ul>
+                </li>
+                 
+            </ul>
+            <div class="nav-actions">
+                <a href="account.html" class="nav-icon" data-bs-toggle="tooltip" title="Account">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <a href="cart.html" class="nav-icon" data-bs-toggle="tooltip" title="Cart">
+                    <i class="bi bi-cart"></i>
+                    <span class="cart-badge">3</span>
+                </a>
+                <a href="account.html#wishlist" class="nav-icon" data-bs-toggle="tooltip" title="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="login.html" class="login-btn active">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <script>
+        window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.ovrsn-navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    </script>
+
+    
+    <div class="container mt-5 pt-4">
+        
+        <div class="checkout-progress mt-5">
+            <div class="progress-line"></div>
+            <div class="progress-step completed">
+                <div class="step-number">
+                    <i class="bi bi-check"></i>
+                </div>
+                <small>Cart</small>
+            </div>
+            <div class="progress-step active">
+                <div class="step-number">2</div>
+                <small>Checkout</small>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <small>Confirmation</small>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="mb-4">Shipping Information</h4>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" class="form-control mb-2" placeholder="Street Address">
+                                    <input type="text" class="form-control" placeholder="Apartment, suite, etc. (optional)">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">City</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">State</label>
+                                    <select class="form-select">
+                                        <option>Palestine</option>
+                                        <option>is</option>
+                                        <option>free</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">ZIP Code</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="mb-4">Payment Method</h4>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="payment-method active">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-credit-card payment-icon me-3"></i>
+                                        <div>
+                                            <h6 class="mb-1">Credit Card</h6>
+                                            <small class="text-muted">Secure payment via credit card</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="payment-method">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-paypal payment-icon me-3"></i>
+                                        <div>
+                                            <h6 class="mb-1">PayPal</h6>
+                                            <small class="text-muted">Safe payment with PayPal</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="mt-4">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Expiration Date</label>
+                                    <input type="text" class="form-control" placeholder="MM/YY">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">CVV</label>
+                                    <input type="text" class="form-control" placeholder="123">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Name on Card</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="mb-4">Payment Details</h4>
+
+                     
+                        
+                        <div class="border-top pt-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Subtotal</span>
+                                <span>$99.98</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Shipping</span>
+                                <span>$5.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Tax</span>
+                                <span>$10.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="text-success">Discount</span>
+                                <span class="text-success">-$10.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <strong>Total</strong>
+                                <strong>$104.98</strong>
+                            </div>
+
+                            <button class="btn btn-dark w-100 mb-3">Place Order</button>
+                            <small class="d-block text-center text-muted">
+                                <i class="bi bi-shield-lock me-1"></i>
+                                Secure Checkout
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                 
+                <div class="col-md-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="contact.html#faq-section" class="text-decoration-none text-muted">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="men.html" class="text-decoration-none text-muted">Men</a></li>
+                        <li><a href="women.html" class="text-decoration-none text-muted">Women</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <h5 class="mb-4">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="mb-4">Secure Payments</h5>
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-credit-card fs-3"></i>
+                        <i class="bi bi-paypal fs-3"></i>
+                        <i class="bi bi-google fs-3"></i>
+                        <i class="bi bi-apple fs-3"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2025 OVRSN SHOP | Designed with ♥ by yosf143.com</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

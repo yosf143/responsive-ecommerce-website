@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+ 
+</head>
+<body>
+   
+<nav class="navbar navbar-expand-lg fixed-top ovrsn-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-text">OVRSN</span>
+            <span class="brand-text-accent">SHOP</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Index</a></li>
+                        <li><a class="dropdown-item" href="account.html">account</a></li>
+                        <li><a class="dropdown-item" href="cart.html">cart</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="checkout.html">checkout</a></li>
+                        <li><a class="dropdown-item" href="men.html">men's collection</a></li>
+                        <li><a class="dropdown-item" href="women.html">women's collection</a></li>
+                        <li><a class="dropdown-item" href="product.html">product</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">login & register</a></li>
+                        <li><a class="dropdown-item" href="contact.html">contact</a></li>
+                    </ul>
+                </li>
+                 
+            </ul>
+            <div class="nav-actions">
+                <a href="account.html" class="nav-icon" data-bs-toggle="tooltip" title="Account">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <a href="cart.html" class="nav-icon" data-bs-toggle="tooltip" title="Cart">
+                    <i class="bi bi-cart"></i>
+                    <span class="cart-badge">3</span>
+                </a>
+                <a href="account.html#wishlist" class="nav-icon" data-bs-toggle="tooltip" title="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="login.html" class="login-btn active">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.ovrsn-navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    
+    <section class="auth-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-8 col-sm-10">
+                    <div class="auth-card-container">
+                        <div class="auth-card">
+                            
+                            <div class="auth-card-front">
+                                <div class="auth-header text-center mb-4">
+                                    <h2 class="auth-title">Welcome Back</h2>
+                                    <p class="auth-subtitle">Sign in to your account</p>
+                                </div>
+                                
+                                <form class="auth-form">
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent">
+                                                <i class="bi bi-envelope"></i>
+                                            </span>
+                                            <input type="email" class="form-control" placeholder="Email address" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent">
+                                                <i class="bi bi-lock"></i>
+                                            </span>
+                                            <input type="password" class="form-control" placeholder="Password" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                                        </div>
+                                        <a href="#" class="forgot-password">Forgot password?</a>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-dark w-100 mb-3">Sign In</button>
+                                    
+                                    <div class="social-login">
+                                        <p class="text-center text-muted my-3">Or sign in with</p>
+                                        <div class="d-flex justify-content-center gap-3">
+                                            <a href="#" class="social-btn">
+                                                <i class="bi bi-google"></i>
+                                            </a>
+                                            <a href="#" class="social-btn">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="#" class="social-btn">
+                                                <i class="bi bi-apple"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                                <div class="auth-footer text-center mt-4">
+                                    <p>Don't have an account? 
+                                        <a href="#" class="flip-card-btn">Create account</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="auth-card-back">
+                                <div class="auth-header text-center mb-4">
+                                    <h2 class="auth-title">Create Account</h2>
+                                    <p class="auth-subtitle">Join our community</p>
+                                </div>
+                                
+                                <form class="auth-form">
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent">
+                                                <i class="bi bi-person"></i>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Full name" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent">
+                                                <i class="bi bi-envelope"></i>
+                                            </span>
+                                            <input type="email" class="form-control" placeholder="Email address" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent">
+                                                <i class="bi bi-lock"></i>
+                                            </span>
+                                            <input type="password" class="form-control" placeholder="Password" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-transparent">
+                                                <i class="bi bi-lock-fill"></i>
+                                            </span>
+                                            <input type="password" class="form-control" placeholder="Confirm password" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                        <label class="form-check-label" for="termsCheck">
+                                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                        </label>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-dark w-100 mb-3">Create Account</button>
+                                    
+                                    <div class="social-register">
+                                        <p class="text-center text-muted my-3">Or register with</p>
+                                        <div class="d-flex justify-content-center gap-3">
+                                            <a href="#" class="social-btn">
+                                                <i class="bi bi-google"></i>
+                                            </a>
+                                            <a href="#" class="social-btn">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                            <a href="#" class="social-btn">
+                                                <i class="bi bi-apple"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                                <div class="auth-footer text-center mt-4">
+                                    <p>Already have an account? 
+                                        <a href="#" class="flip-card-btn">Sign in</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="contact.html#faq-section" class="text-decoration-none text-muted">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="men.html" class="text-decoration-none text-muted">Men</a></li>
+                        <li><a href="women.html" class="text-decoration-none text-muted">Women</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="mb-4">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="mb-4">Secure Payments</h5>
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-credit-card fs-3"></i>
+                        <i class="bi bi-paypal fs-3"></i>
+                        <i class="bi bi-google fs-3"></i>
+                        <i class="bi bi-apple fs-3"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2025 OVRSN SHOP | Designed with ♥ by yosf143.com</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const flipBtns = document.querySelectorAll('.flip-card-btn');
+            const authCard = document.querySelector('.auth-card');
+            
+            flipBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    authCard.classList.toggle('flipped');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

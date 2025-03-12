@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top ovrsn-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-text">OVRSN</span>
+            <span class="brand-text-accent">SHOP</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Index</a></li>
+                        <li><a class="dropdown-item" href="account.html">account</a></li>
+                        <li><a class="dropdown-item" href="cart.html">cart</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="checkout.html">checkout</a></li>
+                        <li><a class="dropdown-item" href="men.html">men's collection</a></li>
+                        <li><a class="dropdown-item" href="women.html">women's collection</a></li>
+                        <li><a class="dropdown-item" href="product.html">product</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">login & register</a></li>
+                        <li><a class="dropdown-item" href="contact.html">contact</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="nav-actions">
+                <a href="account.html" class="nav-icon" data-bs-toggle="tooltip" title="Account">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <a href="cart.html" class="nav-icon" data-bs-toggle="tooltip" title="Cart">
+                    <i class="bi bi-cart"></i>
+                    <span class="cart-badge">3</span>
+                </a>
+                <a href="account.html#wishlist" class="nav-icon" data-bs-toggle="tooltip" title="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="login.html" class="login-btn active">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.ovrsn-navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    
+    <section class="account-section py-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-3 mb-4">
+                    <div class="account-sidebar">
+                        <div class="account-user-info mb-4">
+                            <div class="account-avatar">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="account-name">
+                                <h5 class="mb-0">Yousef 143</h5>
+                                <p class="text-muted mb-0">yousef@example.com</p>
+                            </div>
+                        </div>
+
+                        <div class="account-menu">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#dashboard" data-bs-toggle="tab">
+                                        <i class="bi bi-grid"></i> Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#orders" data-bs-toggle="tab">
+                                        <i class="bi bi-box-seam"></i> Orders
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tracking" data-bs-toggle="tab">
+                                        <i class="bi bi-truck"></i> Order Tracking
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#addresses" data-bs-toggle="tab">
+                                        <i class="bi bi-geo-alt"></i> Addresses
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#payment" data-bs-toggle="tab">
+                                        <i class="bi bi-credit-card"></i> Payment Methods
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#wishlist" data-bs-toggle="tab">
+                                        <i class="bi bi-heart"></i> Wishlist
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#settings" data-bs-toggle="tab">
+                                        <i class="bi bi-gear"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li class="nav-item mt-3">
+                                    <a class="nav-link text-danger" href="login.html">
+                                        <i class="bi bi-box-arrow-right"></i> Sign Out
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-9">
+                    <div class="tab-content account-content">
+                        
+                        <div class="tab-pane fade show active" id="dashboard">
+                            <div class="account-box mb-4">
+                                <h4 class="account-title">Account Overview</h4>
+                                <div class="row g-4 mt-1">
+                                    <div class="col-md-4">
+                                        <div class="dashboard-card">
+                                            <div class="dashboard-card-icon">
+                                                <i class="bi bi-box-seam"></i>
+                                            </div>
+                                            <div class="dashboard-card-info">
+                                                <h2>12</h2>
+                                                <p>Total Orders</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dashboard-card">
+                                            <div class="dashboard-card-icon">
+                                                <i class="bi bi-truck"></i>
+                                            </div>
+                                            <div class="dashboard-card-info">
+                                                <h2>2</h2>
+                                                <p>In Transit</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dashboard-card">
+                                            <div class="dashboard-card-icon">
+                                                <i class="bi bi-heart"></i>
+                                            </div>
+                                            <div class="dashboard-card-info">
+                                                <h2>8</h2>
+                                                <p>Wishlist Items</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="account-box mb-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h5 class="mb-0">Recent Orders</h5>
+                                            <a href="#orders" class="view-all-link" data-bs-toggle="tab">View All</a>
+                                        </div>
+                                        <ul class="list-group recent-orders-list">
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <p class="mb-0 fw-medium">#ORD-2023985</p>
+                                                        <small class="text-muted">Mar 8, 2025</small>
+                                                    </div>
+                                                    <span class="badge bg-success">Delivered</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <p class="mb-0 fw-medium">#ORD-2023764</p>
+                                                        <small class="text-muted">Feb 27, 2025</small>
+                                                    </div>
+                                                    <span class="badge bg-info">Shipped</span>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <p class="mb-0 fw-medium">#ORD-2023591</p>
+                                                        <small class="text-muted">Feb 12, 2025</small>
+                                                    </div>
+                                                    <span class="badge bg-success">Delivered</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="account-box mb-4">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h5 class="mb-0">Default Address</h5>
+                                            <a href="#addresses" class="view-all-link" data-bs-toggle="tab">Manage</a>
+                                        </div>
+                                        <div class="default-address p-3">
+                                            <p class="fw-medium mb-1">Home</p>
+                                            <p class="mb-1">Yousef 143</p>
+                                            <p class="mb-1">123 Main Street, Apt 4B</p>
+                                            <p class="mb-1">West Bank, Hebron 397</p>
+                                            <p class="mb-1">Palestine</p>
+                                            <p class="mb-0">+970 591234567</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="tab-pane fade" id="orders">
+                            <div class="account-box">
+                                <h4 class="account-title">My Orders</h4>
+
+                                <div class="order-search mb-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search orders...">
+                                        <button class="btn btn-dark" type="button">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table orders-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Date</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#ORD-2023985</td>
+                                                <td>Mar 8, 2025</td>
+                                                <td>$234.50</td>
+                                                <td><span class="badge bg-success">Delivered</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark order-details-btn" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#ORD-2023764</td>
+                                                <td>Feb 27, 2025</td>
+                                                <td>$178.25</td>
+                                                <td><span class="badge bg-info">Shipped</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark order-details-btn" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#ORD-2023591</td>
+                                                <td>Feb 12, 2025</td>
+                                                <td>$347.80</td>
+                                                <td><span class="badge bg-success">Delivered</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark order-details-btn" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#ORD-2023428</td>
+                                                <td>Jan 29, 2025</td>
+                                                <td>$112.99</td>
+                                                <td><span class="badge bg-success">Delivered</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark order-details-btn" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#ORD-2023347</td>
+                                                <td>Jan 15, 2025</td>
+                                                <td>$89.99</td>
+                                                <td><span class="badge bg-success">Delivered</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-dark order-details-btn" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <nav aria-label="Orders pagination" class="mt-4">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        
+                        <div class="tab-pane fade" id="tracking">
+                            <div class="account-box">
+                                <h4 class="account-title">Track Your Order</h4>
+
+                                <div class="tracking-search mb-4">
+                                    <form class="tracking-form">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="trackingNumber" placeholder="Enter tracking number">
+                                                    <label for="trackingNumber">Order/Tracking Number</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="email" class="form-control" id="trackingEmail" placeholder="Enter email">
+                                                    <label for="trackingEmail">Email Address</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-dark">Track Order</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="active-tracking">
+                                    <div class="active-tracking-header mb-3">
+                                        <h5 class="mb-0">Order #ORD-2023764</h5>
+                                        <p class="text-muted mb-0">Expected delivery: March 14, 2025</p>
+                                    </div>
+
+                                    <div class="tracking-timeline">
+                                        <div class="timeline-item completed">
+                                            <div class="timeline-icon">
+                                                <i class="bi bi-check-circle-fill"></i>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <h6>Order Placed</h6>
+                                                <p class="mb-0">Feb 27, 2025, 10:23 AM</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-item completed">
+                                            <div class="timeline-icon">
+                                                <i class="bi bi-check-circle-fill"></i>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <h6>Order Processed</h6>
+                                                <p class="mb-0">Feb 28, 2025, 2:45 PM</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-item active">
+                                            <div class="timeline-icon">
+                                                <i class="bi bi-truck"></i>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <h6>Shipped</h6>
+                                                <p class="mb-0">Mar 2, 2025, 9:15 AM</p>
+                                                <span class="badge bg-info">Current Status</span>
+                                                <p class="location-details mt-2">
+                                                    <i class="bi bi-geo-alt-fill"></i> In transit - China Distribution Center
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-item">
+                                            <div class="timeline-icon">
+                                                <i class="bi bi-house"></i>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <h6>Out for Delivery</h6>
+                                                <p class="mb-0">Estimated: Mar 13, 2025</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-item">
+                                            <div class="timeline-icon">
+                                                <i class="bi bi-box-seam"></i>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <h6>Delivered</h6>
+                                                <p class="mb-0">Estimated: Mar 14, 2025</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="tab-pane fade" id="addresses">
+                            <div class="account-box">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h4 class="account-title mb-0">My Addresses</h4>
+                                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                                        <i class="bi bi-plus-lg"></i> Add New Address
+                                    </button>
+                                </div>
+
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="address-card">
+                                            <div class="address-card-header">
+                                                <div>
+                                                    <span class="address-label">Home</span>
+                                                    <span class="address-badge">Default</span>
+                                                </div>
+                                                <div class="address-actions">
+                                                    <button class="btn btn-sm address-action-btn" data-bs-toggle="tooltip" title="Edit">
+                                                        <i class="bi bi-pencil"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm address-action-btn" data-bs-toggle="tooltip" title="Delete">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="address-card-body">
+                                                <p class="mb-1">Yousef 143</p>
+                                                <p class="mb-1">123 Main Street, Apt 4B</p>
+                                                <p class="mb-1">West Bank, Hebron 397</p>
+                                                <p class="mb-1">Palestine</p>
+                                                <p class="mb-0">+970 591234567</p>
+                                            </div>
+                                            <div class="address-card-footer">
+                                                <button class="btn btn-outline-dark w-100">Ship to this address</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="address-card">
+                                            <div class="address-card-header">
+                                                <div>
+                                                    <span class="address-label">Office</span>
+                                                </div>
+                                                <div class="address-actions">
+                                                    <button class="btn btn-sm address-action-btn" data-bs-toggle="tooltip" title="Edit">
+                                                        <i class="bi bi-pencil"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm address-action-btn" data-bs-toggle="tooltip" title="Delete">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="address-card-body">
+                                                <p class="mb-1">Yousef 143</p>
+                                                <p class="mb-1">456 Business Ave, Floor 8</p>
+                                                <p class="mb-1">West Bank, Hebron 10073</p>
+                                                <p class="mb-1">Palestine</p>
+                                                <p class="mb-0">+1 (555) 987-6543</p>
+                                            </div>
+                                            <div class="address-card-footer">
+                                                <button class="btn btn-outline-dark w-100">Ship to this address</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="tab-pane fade" id="payment">
+                            <div class="account-box">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h4 class="account-title mb-0">Payment Methods</h4>
+                                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addPaymentModal">
+                                        <i class="bi bi-plus-lg"></i> Add Payment Method
+                                    </button>
+                                </div>
+
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="payment-card">
+                                            <div class="payment-card-header">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="payment-card-icon me-3">
+                                                        <i class="bi bi-credit-card"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-0">Visa ending in 4567</h6>
+                                                        <small class="text-muted">Expires 05/2027</small>
+                                                    </div>
+                                                </div>
+                                                <div class="payment-card-badge">Default</div>
+                                            </div>
+                                            <div class="payment-card-footer">
+                                                <div class="d-flex gap-2">
+                                                    <button class="btn btn-sm btn-outline-dark">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-dark">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="payment-card">
+                                            <div class="payment-card-header">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="payment-card-icon me-3">
+                                                        <i class="bi bi-credit-card"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-0">Mastercard ending in 9876</h6>
+                                                        <small class="text-muted">Expires 11/2026</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="payment-card-footer">
+                                                <div class="d-flex gap-2">
+                                                    <button class="btn btn-sm btn-outline-dark">Edit</button>
+                                                    <button class="btn btn-sm btn-outline-dark">Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="tab-pane fade" id="wishlist">
+                            <div class="account-box">
+                                <h4 class="account-title">My Wishlist</h4>
+
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="wishlist-item">
+                                            <div class="wishlist-item-img">
+                                                <img src="assets/images/product.png" alt="Product" class="img-fluid">
+                                                <button class="wishlist-item-remove" data-bs-toggle="tooltip" title="Remove">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </button>
+                                            </div>
+                                            <div class="wishlist-item-info">
+                                                <h5 class="wishlist-item-title">SHOP Jacket</h5>
+                                                <p class="wishlist-item-price">$129.99</p>
+                                                <button class="btn btn-sm btn-dark w-100">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="wishlist-item">
+                                            <div class="wishlist-item-img">
+                                                <img src="assets/images/product.png" alt="Product" class="img-fluid">
+                                                <button class="wishlist-item-remove" data-bs-toggle="tooltip" title="Remove">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </button>
+                                            </div>
+                                            <div class="wishlist-item-info">
+                                                <h5 class="wishlist-item-title">Classic Shirt</h5>
+                                                <p class="wishlist-item-price">$49.99</p>
+                                                <button class="btn btn-sm btn-dark w-100">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="wishlist-item">
+                                            <div class="wishlist-item-img">
+                                                <img src="assets/images/product.png" alt="Product" class="img-fluid">
+                                                <button class="wishlist-item-remove" data-bs-toggle="tooltip" title="Remove">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </button>
+                                            </div>
+                                            <div class="wishlist-item-info">
+                                                <h5 class="wishlist-item-title">Designer Pants</h5>
+                                                <p class="wishlist-item-price">$79.99</p>
+                                                <button class="btn btn-sm btn-dark w-100">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="wishlist-item">
+                                            <div class="wishlist-item-img">
+                                                <img src="assets/images/product.png" alt="Product" class="img-fluid">
+                                                <button class="wishlist-item-remove" data-bs-toggle="tooltip" title="Remove">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </button>
+                                            </div>
+                                            <div class="wishlist-item-info">
+                                                <h5 class="wishlist-item-title">Casual Sneakers</h5>
+                                                <p class="wishlist-item-price">$89.99</p>
+                                                <button class="btn btn-sm btn-dark w-100">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="tab-pane fade" id="settings">
+                            <div class="account-box">
+                                <h4 class="account-title">Account Settings</h4>
+
+                                <form class="settings-form">
+                                    <div class="row mb-4">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" value="Yousef">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" value="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" value="yousef@example.com">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" value="+970 591234567">
+                                        </div>
+                                    </div>
+
+                                    <div class="password-section mb-4">
+                                        <h5 class="section-title">Change Password</h5>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="currentPassword" class="form-label">Current Password</label>
+                                                <input type="password" class="form-control" id="currentPassword">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="newPassword" class="form-label">New Password</label>
+                                                <input type="password" class="form-control" id="newPassword">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                                <input type="password" class="form-control" id="confirmPassword">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="notifications-section mb-4">
+                                        <h5 class="section-title">Notification Preferences</h5>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="orderUpdates" checked>
+                                            <label class="form-check-label" for="orderUpdates">
+                                                Order updates and shipping notifications
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="promotions" checked>
+                                            <label class="form-check-label" for="promotions">
+                                                Promotions, discounts, and special offers
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="newArrivals">
+                                            <label class="form-check-label" for="newArrivals">
+                                                New arrivals and product updates
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                                            <label class="form-check-label" for="newsletter">
+                                                Weekly newsletter
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button type="reset" class="btn btn-outline-dark">Cancel</button>
+                                        <button type="submit" class="btn btn-dark">Save Changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderDetailsModalLabel">Order #ORD-2023764</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="order-details-header mb-4">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="text-muted mb-1">Order Date</p>
+                                <p class="fw-medium">Feb 27, 2025</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="text-muted mb-1">Total Amount</p>
+                                <p class="fw-medium">$178.25</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="text-muted mb-1">Status</p>
+                                <span class="badge bg-info">Shipped</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-details-items mb-4">
+                        <h6 class="mb-3">Items in your order</h6>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/images/product.png" alt="Product" class="order-item-img me-3">
+                                                <div>
+                                                    <h6 class="mb-0">SHOP Jacket</h6>
+                                                    <small class="text-muted">Size: M, Color: Black</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>$129.99</td>
+                                        <td>1</td>
+                                        <td>$129.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="assets/images/product.png" alt="Product" class="order-item-img me-3">
+                                                <div>
+                                                    <h6 class="mb-0">Designer Pants</h6>
+                                                    <small class="text-muted">Size: 32, Color: Navy</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>$79.99</td>
+                                        <td>1</td>
+                                        <td>$79.99</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <h6 class="mb-3">Shipping Address</h6>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="mb-1">Yousef 143</p>
+                                    <p class="mb-1">123 Main Street, Apt 4B</p>
+                                    <p class="mb-1">West Bank, Hebron 397</p>
+                                    <p class="mb-1">Palestine</p>
+                                    <p class="mb-0">+970 591234567</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <h6 class="mb-3">Order Summary</h6>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Subtotal</span>
+                                        <span>$209.98</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Shipping</span>
+                                        <span>$8.99</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Tax</span>
+                                        <span>$17.85</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Discount</span>
+                                        <span>-$58.57</span>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between fw-bold">
+                                        <span>Total</span>
+                                        <span>$178.25</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark">Track Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="addAddressModal" tabindex="-1" aria-labelledby="addAddressModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addAddressModalLabel">Add New Address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addAddressForm">
+                        <div class="mb-3">
+                            <label for="addressName" class="form-label">Address Name</label>
+                            <input type="text" class="form-control" id="addressName" placeholder="Home, Office, etc.">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="addressLine1" class="form-label">Address Line 1</label>
+                            <input type="text" class="form-control" id="addressLine1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="addressLine2" class="form-label">Address Line 2 (Optional)</label>
+                            <input type="text" class="form-control" id="addressLine2">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="state" class="form-label">State/Province</label>
+                                <input type="text" class="form-control" id="state">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="zipCode" class="form-label">ZIP/Postal Code</label>
+                                <input type="text" class="form-control" id="zipCode">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="country" class="form-label">Country</label>
+                                <select class="form-select" id="country">
+                                    <option value="US">Palestine</option>
+                                    <option value="CA">Jordan</option>
+                                    <option value="UK">UAE</option>
+                                    <option value="AU">Syria</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="defaultAddress">
+                            <label class="form-check-label" for="defaultAddress">
+                                Set as default address
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark" form="addAddressForm">Save Address</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="addPaymentModal" tabindex="-1" aria-labelledby="addPaymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPaymentModalLabel">Add Payment Method</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addPaymentForm">
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label">Name on Card</label>
+                            <input type="text" class="form-control" id="cardName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="expiryDate" class="form-label">Expiry Date</label>
+                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cvv" placeholder="XXX">
+                            </div>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="defaultPayment">
+                            <label class="form-check-label" for="defaultPayment">
+                                Set as default payment method
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark" form="addPaymentForm">Save Payment Method</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="contact.html#faq-section" class="text-decoration-none text-muted">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="men.html" class="text-decoration-none text-muted">Men</a></li>
+                        <li><a href="women.html" class="text-decoration-none text-muted">Women</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="mb-4">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="mb-4">Secure Payments</h5>
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-credit-card fs-3"></i>
+                        <i class="bi bi-paypal fs-3"></i>
+                        <i class="bi bi-google fs-3"></i>
+                        <i class="bi bi-apple fs-3"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2025 OVRSN SHOP | Designed with ♥ by yosf143.com</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/ui.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Collection</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top ovrsn-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-text">OVRSN</span>
+            <span class="brand-text-accent">SHOP</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Index</a></li>
+                        <li><a class="dropdown-item" href="account.html">account</a></li>
+                        <li><a class="dropdown-item" href="cart.html">cart</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="checkout.html">checkout</a></li>
+                        <li><a class="dropdown-item" href="men.html">men's collection</a></li>
+                        <li><a class="dropdown-item" href="women.html">women's collection</a></li>
+                        <li><a class="dropdown-item" href="product.html">product</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">login & register</a></li>
+                        <li><a class="dropdown-item" href="contact.html">contact</a></li>
+                    </ul>
+                </li>
+                 
+            </ul>
+            <div class="nav-actions">
+                <a href="account.html" class="nav-icon" data-bs-toggle="tooltip" title="Account">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <a href="cart.html" class="nav-icon" data-bs-toggle="tooltip" title="Cart">
+                    <i class="bi bi-cart"></i>
+                    <span class="cart-badge">3</span>
+                </a>
+                <a href="account.html#wishlist" class="nav-icon" data-bs-toggle="tooltip" title="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="login.html" class="login-btn active">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <script>
+        window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.ovrsn-navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    </script>
+
+    
+    <div class="container mt-5 pt-4">
+        
+        <div class="row my-4">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Shop</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Women's Collection</li>
+                    </ol>
+                </nav>
+                <h1 class="display-6 mb-4">Women's Collection</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-lg-3">
+                <div class="filter-section mb-4">
+                    
+                    <div class="mb-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search products...">
+                            <button class="btn btn-dark">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <h6 class="filter-title mb-3">Categories</h6>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="tshirts">
+                            <label class="form-check-label" for="tshirts">T-Shirts (24)</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="shirts">
+                            <label class="form-check-label" for="shirts">Shirts (18)</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="jeans">
+                            <label class="form-check-label" for="jeans">Jeans (15)</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="jackets">
+                            <label class="form-check-label" for="jackets">Jackets (12)</label>
+                        </div>
+                         
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <h6 class="filter-title mb-3">Colors</h6>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <div class="color-option" style="background-color: #000000;" title="Black"></div>
+                            <div class="color-option" style="background-color: #FFFFFF;" title="White"></div>
+                            <div class="color-option" style="background-color: #FF0000;" title="Red"></div>
+                            <div class="color-option" style="background-color: #0000FF;" title="Blue"></div>
+                            <div class="color-option" style="background-color: #006400;" title="Green"></div>
+                            <div class="color-option" style="background-color: #808080;" title="Gray"></div>
+                            <div class="color-option" style="background-color: #8B4513;" title="Brown"></div>
+                            <div class="color-option" style="background-color: #FFD700;" title="Yellow"></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <h6 class="filter-title mb-3">Sizes</h6>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button class="size-btn">XS</button>
+                            <button class="size-btn">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">XXL</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <h6 class="filter-title mb-3">Price Range</h6>
+                        <div class="d-flex gap-2 align-items-center">
+                            <input type="number" class="form-control" placeholder="Min">
+                            <span>-</span>
+                            <input type="number" class="form-control" placeholder="Max">
+                        </div>
+                    </div>
+
+                    
+                    <button class="btn btn-outline-dark w-100">Clear All Filters</button>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-9">
+                
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <p class="mb-0 text-muted">Showing 24 of 48 products</p>
+                    <select class="form-select w-auto">
+                        <option>Most Popular</option>
+                        <option>Newest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                </div>
+
+                
+                <div class="row g-4">
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 card-hover h-100">
+                            <span class="badge bg-danger product-badge">-20%</span>
+                            <div class="product-actions">
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <img src="assets/images/product.png" class="card-img-top" alt="Product">
+                            <div class="card-body">
+                                <h5 class="card-title">Premium Cotton T-Shirt</h5>
+                                <p class="card-text text-muted mb-2">Classic fit, 100% cotton</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-danger me-2">$39.99</span>
+                                        <small class="text-muted text-decoration-line-through">$49.99</small>
+                                    </div>
+                                    <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 card-hover h-100">
+                            <span class="badge bg-success product-badge">New</span>
+                            <div class="product-actions">
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <img src="assets/images/product.png" class="card-img-top" alt="Product">
+                            <div class="card-body">
+                                <h5 class="card-title">Slim Fit Denim Jeans</h5>
+                                <p class="card-text text-muted mb-2">Stretch denim, perfect fit</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-dark">$79.99</span>
+                                    </div>
+                                    <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 card-hover h-100">
+                            <div class="product-actions">
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <img src="assets/images/product.png" class="card-img-top" alt="Product">
+                            <div class="card-body">
+                                <h5 class="card-title">Casual Oxford Shirt</h5>
+                                <p class="card-text text-muted mb-2">Button-down collar, regular fit</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-dark">$59.99</span>
+                                    </div>
+                                    <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border-0 card-hover h-100">
+                            <span class="badge bg-danger product-badge">-15%</span>
+                            <div class="product-actions">
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <img src="assets/images/product.png" class="card-img-top" alt="Product">
+                            <div class="card-body">
+                                <h5 class="card-title">Sporty Running Sneakers</h5>
+                                <p class="card-text text-muted mb-2">Lightweight, breathable, cushioned sole</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-danger me-2">$59.99</span>
+                                        <small class="text-muted text-decoration-line-through">$69.99</small>
+                                    </div>
+                                    <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 card-hover h-100">
+                            <span class="badge bg-danger product-badge">-25%</span>
+                            <div class="product-actions">
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <img src="assets/images/product.png" class="card-img-top" alt="Product">
+                            <div class="card-body">
+                                <h5 class="card-title">Luxury Smartwatch</h5>
+                                <p class="card-text text-muted mb-2">Fitness tracking, heart rate monitor</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-danger me-2">$149.99</span>
+                                        <small class="text-muted text-decoration-line-through">$199.99</small>
+                                    </div>
+                                    <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 card-hover h-100">
+                            <span class="badge bg-danger product-badge">-10%</span>
+                            <div class="product-actions">
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <img src="assets/images/product.png" class="card-img-top" alt="Product">
+                            <div class="card-body">
+                                <h5 class="card-title">Cozy Fleece Hoodie</h5>
+                                <p class="card-text text-muted mb-2">Soft, warm, available in multiple colors</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-danger me-2">$44.99</span>
+                                        <small class="text-muted text-decoration-line-through">$49.99</small>
+                                    </div>
+                                    <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 card-hover h-100">
+                            <span class="badge bg-danger product-badge">-30%</span>
+                            <div class="product-actions">
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <img src="assets/images/product.png" class="card-img-top" alt="Product">
+                            <div class="card-body">
+                                <h5 class="card-title">Waterproof Travel Backpack</h5>
+                                <p class="card-text text-muted mb-2">Spacious, durable, multiple compartments</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-danger me-2">$34.99</span>
+                                        <small class="text-muted text-decoration-line-through">$49.99</small>
+                                    </div>
+                                    <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card border-0 card-hover h-100">
+                            <span class="badge bg-danger product-badge">-20%</span>
+                            <div class="product-actions">
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                                <button class="btn btn-light btn-sm rounded-circle">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                            <img src="assets/images/product.png" class="card-img-top" alt="Product">
+                            <div class="card-body">
+                                <h5 class="card-title">Polarized Sunglasses</h5>
+                                <p class="card-text text-muted mb-2">UV protection, stylish, lightweight</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-danger me-2">$19.99</span>
+                                        <small class="text-muted text-decoration-line-through">$24.99</small>
+                                    </div>
+                                    <button class="btn btn-outline-dark btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+                <nav class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                 
+                <div class="col-md-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="contact.html#faq-section" class="text-decoration-none text-muted">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="men.html" class="text-decoration-none text-muted">Men</a></li>
+                        <li><a href="women.html" class="text-decoration-none text-muted">Women</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <h5 class="mb-4">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="mb-4">Secure Payments</h5>
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-credit-card fs-3"></i>
+                        <i class="bi bi-paypal fs-3"></i>
+                        <i class="bi bi-google fs-3"></i>
+                        <i class="bi bi-apple fs-3"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2025 OVRSN SHOP | Designed with ♥ by yosf143.com</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

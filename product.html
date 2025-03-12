@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+   
+<nav class="navbar navbar-expand-lg fixed-top ovrsn-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-text">OVRSN</span>
+            <span class="brand-text-accent">SHOP</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Index</a></li>
+                        <li><a class="dropdown-item" href="account.html">account</a></li>
+                        <li><a class="dropdown-item" href="cart.html">cart</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="checkout.html">checkout</a></li>
+                        <li><a class="dropdown-item" href="men.html">men's collection</a></li>
+                        <li><a class="dropdown-item" href="women.html">women's collection</a></li>
+                        <li><a class="dropdown-item" href="product.html">product</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">login & register</a></li>
+                        <li><a class="dropdown-item" href="contact.html">contact</a></li>
+                    </ul>
+                </li>
+                 
+            </ul>
+            <div class="nav-actions">
+                <a href="account.html" class="nav-icon" data-bs-toggle="tooltip" title="Account">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <a href="cart.html" class="nav-icon" data-bs-toggle="tooltip" title="Cart">
+                    <i class="bi bi-cart"></i>
+                    <span class="cart-badge">3</span>
+                </a>
+                <a href="account.html#wishlist" class="nav-icon" data-bs-toggle="tooltip" title="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="login.html" class="login-btn active">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <script>
+        window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.ovrsn-navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    </script>
+
+    
+    <div class="container mt-5 pt-4">
+        
+        <nav aria-label="breadcrumb" class="mt-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Men</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">T-Shirts</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Premium Cotton T-Shirt</li>
+            </ol>
+        </nav>
+
+        
+        <div class="row">
+            
+            <div class="col-lg-7 mb-4">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="d-flex flex-column gap-3">
+                            <img src="assets/images/product.png" class="img-fluid product-small-img active rounded" alt="Product view 1">
+                            <img src="assets/images/product.png" class="img-fluid product-small-img rounded" alt="Product view 2">
+                            <img src="assets/images/product.png" class="img-fluid product-small-img rounded" alt="Product view 3">
+                            <img src="assets/images/product.png" class="img-fluid product-small-img rounded" alt="Product view 4">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="zoom-container rounded">
+                            <img src="assets/images/product.png" class="img-fluid rounded" alt="Premium Cotton T-Shirt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-5">
+                <div class="ps-lg-4">
+                    <span class="badge bg-danger mb-2">SALE -20%</span>
+                    <h1 class="h2 mb-2">Premium Cotton T-Shirt</h1>
+                    <div class="d-flex align-items-center mb-3">
+              
+                    </div>
+                    <div class="mb-3">
+                        <span class="h3 text-danger me-2">$39.99</span>
+                        <span class="text-muted text-decoration-line-through">$49.99</span>
+                    </div>
+                    <p class="mb-4">Classic fit t-shirt made from premium 100% organic cotton. Featuring a crew neck and short sleeves, this versatile piece offers both style and comfort.</p>
+
+                    
+                    <div class="mb-4">
+                        <h6 class="mb-3">Color</h6>
+                        <div class="d-flex gap-2">
+                            <div class="color-option active" style="background-color: #000000;" title="Black"></div>
+                            <div class="color-option" style="background-color: #FFFFFF;" title="White"></div>
+                            <div class="color-option" style="background-color: #0000FF;" title="Blue"></div>
+                            <div class="color-option" style="background-color: #808080;" title="Gray"></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="mb-0">Size</h6>
+                            <a href="#" class="text-decoration-none text-muted small">Size Guide</a>
+                        </div>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button class="size-btn">XS</button>
+                            <button class="size-btn active">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">XXL</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mb-4">
+                        <div class="d-flex gap-3">
+                            <div class="input-group" style="width: 130px;">
+                                <button class="btn btn-outline-dark">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <input type="text" class="form-control text-center" value="1">
+                                <button class="btn btn-outline-dark">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+                            <button class="btn btn-dark flex-grow-1">
+                                <i class="bi bi-cart me-2"></i>
+                                Add to Cart
+                            </button>
+                            <button class="btn btn-outline-dark">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-truck spec-icon me-3"></i>
+                                <div>
+                                    <h6 class="mb-1">Free Shipping</h6>
+                                    <small class="text-muted">Orders over $50</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-arrow-repeat spec-icon me-3"></i>
+                                <div>
+                                    <h6 class="mb-1">Free Returns</h6>
+                                    <small class="text-muted">Within 30 days</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-shield-check spec-icon me-3"></i>
+                                <div>
+                                    <h6 class="mb-1">Secure Payment</h6>
+                                    <small class="text-muted">SSL Encryption</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-gift spec-icon me-3"></i>
+                                <div>
+                                    <h6 class="mb-1">Special Offers</h6>
+                                    <small class="text-muted">Save up to 20%</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#description">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#specifications">Specifications</button>
+                    </li>
+                     
+                </ul>
+                <div class="tab-content p-4 border border-top-0">
+                    <div class="tab-pane fade show active" id="description">
+                        <h4>Product Description</h4>
+                        <p>This premium cotton t-shirt combines style with sustainability. Made from 100% organic cotton, it offers exceptional comfort and durability while being environmentally conscious.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check2 me-2"></i>100% organic cotton</li>
+                            <li><i class="bi bi-check2 me-2"></i>Classic fit</li>
+                            <li><i class="bi bi-check2 me-2"></i>Crew neck design</li>
+                            <li><i class="bi bi-check2 me-2"></i>Pre-shrunk fabric</li>
+                            <li><i class="bi bi-check2 me-2"></i>Machine washable</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="specifications">
+                        <h4>Product Specifications</h4>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Material</th>
+                                    <td>100% Organic Cotton</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Weight</th>
+                                    <td>180 GSM</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Care Instructions</th>
+                                    <td>Machine wash cold, tumble dry low</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Country of Origin</th>
+                                    <td>Made in Portugal</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Style</th>
+                                    <td>Classic Fit</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+
+ 
+    </div>
+
+    
+    <footer class="bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                 
+                <div class="col-md-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="contact.html#faq-section" class="text-decoration-none text-muted">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Men</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Women</a></li>
+ 
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-4">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-4">Secure Payments</h5>
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-credit-card fs-3"></i>
+                        <i class="bi bi-paypal fs-3"></i>
+                        <i class="bi bi-google fs-3"></i>
+                        <i class="bi bi-apple fs-3"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2025 OVRSN SHOP | Designed with ♥ by yosf143.com</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

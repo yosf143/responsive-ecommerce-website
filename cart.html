@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg fixed-top ovrsn-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-text">OVRSN</span>
+            <span class="brand-text-accent">SHOP</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Index</a></li>
+                        <li><a class="dropdown-item" href="account.html">account</a></li>
+                        <li><a class="dropdown-item" href="cart.html">cart</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="checkout.html">checkout</a></li>
+                        <li><a class="dropdown-item" href="men.html">men's collection</a></li>
+                        <li><a class="dropdown-item" href="women.html">women's collection</a></li>
+                        <li><a class="dropdown-item" href="product.html">product</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">login & register</a></li>
+                        <li><a class="dropdown-item" href="contact.html">contact</a></li>
+                    </ul>
+                </li>
+                 
+            </ul>
+            <div class="nav-actions">
+                <a href="account.html" class="nav-icon" data-bs-toggle="tooltip" title="Account">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <a href="cart.html" class="nav-icon" data-bs-toggle="tooltip" title="Cart">
+                    <i class="bi bi-cart"></i>
+                    <span class="cart-badge">3</span>
+                </a>
+                <a href="account.html#wishlist" class="nav-icon" data-bs-toggle="tooltip" title="Wishlist">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="login.html" class="login-btn active">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <script>
+        window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.ovrsn-navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    </script>
+    
+    <div class="container mt-5 pt-5">
+        
+        <div class="checkout-progress mt-4">
+            <div class="progress-line"></div>
+            <div class="progress-step active">
+                <div class="step-number">1</div>
+                <small>Cart</small>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">2</div>
+                <small>Checkout</small>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <small>Confirmation</small>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0">Shopping Cart</h4>
+                            <span class="text-muted">3 items</span>
+                        </div>
+
+                        
+                        <div class="card mb-3 border">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2">
+                                        <img src="assets/images/product.png" class="img-fluid rounded" alt="Product">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h5 class="mb-1">Premium Cotton T-Shirt</h5>
+                                        <p class="mb-1 text-muted">Size: M | Color: Black</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2">Quantity:</span>
+                                            <div class="input-group input-group-sm" style="width: 100px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <h5 class="mb-0">$39.99</h5>
+                                    </div>
+                                    <div class="col-md-2 text-end">
+                                        <button class="btn btn-link text-danger p-0">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card mb-3 border">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2">
+                                        <img src="assets/images/product.png" class="img-fluid rounded" alt="Product">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h5 class="mb-1">Classic Oxford Shirt</h5>
+                                        <p class="mb-1 text-muted">Size: L | Color: White</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2">Quantity:</span>
+                                            <div class="input-group input-group-sm" style="width: 100px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <h5 class="mb-0">$59.99</h5>
+                                    </div>
+                                    <div class="col-md-2 text-end">
+                                        <button class="btn btn-link text-danger p-0">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card mb-3 border">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2">
+                                        <img src="assets/images/product.png" class="img-fluid rounded" alt="Product">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h5 class="mb-1">Slim Fit Jeans</h5>
+                                        <p class="mb-1 text-muted">Size: 32 | Color: Blue</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2">Quantity:</span>
+                                            <div class="input-group input-group-sm" style="width: 100px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-end">
+                                        <h5 class="mb-0">$79.99</h5>
+                                    </div>
+                                    <div class="col-md-2 text-end">
+                                        <button class="btn btn-link text-danger p-0">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="#" class="btn btn-outline-dark">
+                                <i class="bi bi-arrow-left me-2"></i>Continue Shopping
+                            </a>
+ 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="mb-4">Order Summary</h4>
+
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Coupon Code</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Enter code">
+                                <button class="btn btn-outline-dark">Apply</button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="border-top pt-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Subtotal</span>
+                                <span>$179.97</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Estimated Shipping</span>
+                                <span>$5.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Estimated Tax</span>
+                                <span>$18.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-success">Discount</span>
+                                <span class="text-success">-$20.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <strong>Total</strong>
+                                <strong>$182.97</strong>
+                            </div>
+
+                            <a href="checkout.html" class="btn btn-dark w-100 mt-4">Proceed to Checkout</a>
+
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-shield-lock me-2"></i>
+                                    <span class="text-muted">Secure Checkout</span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <i class="bi bi-credit-card fs-4"></i>
+                                    <i class="bi bi-paypal fs-4"></i>
+                                    <i class="bi bi-google fs-4"></i>
+                                    <i class="bi bi-apple fs-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-truck me-2"></i>
+                            <h6 class="mb-0">Free Shipping</h6>
+                        </div>
+                        <p class="text-muted small mb-0">For orders over $100</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                 
+                <div class="col-md-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="contact.html#faq-section" class="text-decoration-none text-muted">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="men.html" class="text-decoration-none text-muted">Men</a></li>
+                        <li><a href="women.html" class="text-decoration-none text-muted">Women</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <h5 class="mb-4">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="mb-4">Secure Payments</h5>
+                    <div class="d-flex gap-3">
+                        <i class="bi bi-credit-card fs-3"></i>
+                        <i class="bi bi-paypal fs-3"></i>
+                        <i class="bi bi-google fs-3"></i>
+                        <i class="bi bi-apple fs-3"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2025 OVRSN SHOP | Designed with ♥ by yosf143.com</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
